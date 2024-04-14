@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    font-size: 62.5%;
+
+    --forest: hsl(130.5,52.3%,42.7%);
+    --forestSelected: hsl(130, 53%, 19%);
+    --rain: hsl(224, 61%, 59%);
+    --rainSelected: hsl(223.6,41.6%,39.6%);
+    --coffee:hsl(8, 10%, 54%);
+    --coffeeSelected: hsl(10,8.7%,40.8%);
+    --campfire:hsl(29,72.9%,59.4%);
+    --campfireSelected: hsl(29, 49%, 43%);
+}
+
+.sr-only{
+    width: 1px;
+    height: 1px;
+
+    position: absolute;
+    overflow: hidden;
+
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    appearance: none;
+}
+
+html{
+    transition: background 0.3s;
+}
+
+body{
+    text-align: center;
+}
+
+button{
+    border: none;
+
+    cursor: pointer;
+}
+
+#app{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    place-content: center;
+}
+
+.timer{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+#time{
+    font-size: 12.6rem;
+    font-weight: 300;
+}
+
+#controls{
+    margin-top: 4.8rem;
+
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+}
+
+#controls button{
+    background: 0;
+    font-size: 5rem;
+    font-weight: 100;
+
+    transition: color 0.3s;
+}
+
+#controls button:hover{
+    color: hsl(193.4,95.3%,41.4%);
+}
+
+#sounds{
+    display: grid;
+    gap: 3.2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#sounds button{
+    font-size: 5rem;
+    padding: 3rem;
+    border-radius: 2.4rem;
+
+    transition: background 0.3s;
+}
+
+html.forest,
+html.forest #controls button{
+    background-color: var(--forestSelected);
+    color: white;
+
+    transition: background 0.3s;
+}
+
+html.rain,
+html.rain #controls button{
+    background-color: var(--rainSelected);
+    color: white;
+
+    transition: background 0.3s;
+}
+
+html.coffee,
+html.coffee #controls button{
+    background-color: var(--coffeeSelected);
+    color: white;
+
+    transition: background 0.3s;
+}
+
+html.campfire,
+html.campfire #controls button{
+    background-color: var(--campfireSelected);
+    color: white;
+
+    transition: background 0.3s;
+}
+
+#sounds .forest:hover{
+    background-color: var(--forest);
+    color: white;
+}
+
+#sounds .rain:hover{
+    background-color: var(--rain);
+    color: white;
+}
+
+#sounds .coffee:hover{
+    background-color: var(--coffee);
+    color: white;
+}
+
+#sounds .campfire:hover{
+    background-color: var(--campfire);
+    color: white;
+}
+
+html.forest #controls button:hover,
+html.rain #controls button:hover,
+html.coffee #controls button:hover,
+html.campfire #controls button:hover{
+    color: black;
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle{
+    display: none;
+}

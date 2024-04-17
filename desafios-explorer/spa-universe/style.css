@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+a{
+    color: white;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+a:hover{
+    font-weight: bold;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+
+    gap: 3.2rem;
+
+    font-size: 3rem;
+    margin: 4rem 7.2rem;
+}
+
+nav > div{
+    display: flex;
+    gap: 4rem;
+}
+
+html{
+    height: 100vh;
+}
+
+.selectedPage{
+    font-weight: bold;
+}
+
+.bg-01{
+    background-image: url('./assets/bgPage-01.png');
+    background-size: 100vw 100vh;
+}
+
+.bg-02{
+    background-image: url('./assets/bgPage-02.png');
+    background-size: 100vw 100vh;
+}
+
+.bg-03{
+    background-image: url('./assets/bgPage-03.png');
+    background-size: 100vw 100vh;
+}
+
+button{
+    cursor: pointer;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: white;
+
+    margin-top: 18.2rem;
+}
+
+.home h1{
+    font-size: 6rem;
+}
+
+.home a{
+    margin-top: 2.4rem;
+
+    padding: 1.2rem 3.2rem;
+
+    border: 1px solid white;
+    border-radius: .5rem;
+
+    background-color: transparent;
+
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+
+    transition: 0.3s;
+}
+
+.home a:hover{
+    color: #02799D;
+    background-color: #FFFFFF;
+}
+
+.the-universe,
+.exploration,
+.error{
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 65rem;
+
+    margin-left: 10.2rem;
+    margin-top: 14rem;
+}
+
+.the-universe h2,
+.exploration h2,
+.error h2{
+    font-size: 4.8rem;
+}
+
+.the-universe p,
+.exploration p,
+.error p{
+    font-size: 1.8rem;
+    line-height: 3rem;
+
+    margin-top: 1.6rem;
+}

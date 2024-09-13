@@ -1,6 +1,6 @@
 Criar metas
 listar metas
-    metas realizadas
+    metas realizadas (concluidas)
     metas abertas
 marcar/desmarcar metas como concluida
 remover metas
